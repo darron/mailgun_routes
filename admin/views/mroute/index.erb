@@ -26,7 +26,7 @@
                   <h3 class=popover-title><%= pat(:delete_selected_title) %></h3>
                   <div class=popover-content>
                     <% form_tag url('/admin/mroute', :destroy_many), :method => :delete do %>
-                      <%=hidden_field_tag :account_ids, :'data-delete-many-ids' => true %>
+                      <%=hidden_field_tag :mroute_ids, :'data-delete-many-ids' => true %>
                       <%=submit_tag pat(:delete), :class =>'list-menu-popover-delete-selected-btn btn btn-danger btn-small' %>
                       <div class='btn btn-default btn-small cancel'><%= pat(:cancel) %></div>
                     <% end %>
@@ -53,8 +53,8 @@
           <td class=list-column> <%= v['dest'] %> </td>
           <td class="list-column list-row-action">
             <div class='list-row-action-wrapper'>
-               <%= link_to tag_icon(:edit), :href => url('/admin/mroute', :edit, :id => k), :rel => :tooltip, :title => "#{pat(:edit)} account", :class => 'list-row-action-wrapper-link' %>
-               <%= link_to tag_icon(:trash), :rel => :tooltip, :title => "#{pat(:delete)} account", :class => 'list-row-action-delete-one list-row-action-wrapper-link' %>
+               <%= link_to tag_icon(:edit), :href => url('/admin/mroute', :edit, :id => k), :rel => :tooltip, :title => "#{pat(:edit)} mroute", :class => 'list-row-action-wrapper-link' %>
+               <%= link_to tag_icon(:trash), :rel => :tooltip, :title => "#{pat(:delete)} mroute", :class => 'list-row-action-delete-one list-row-action-wrapper-link' %>
                <div class="popover list-row-action-popover-delete-one left">
                  <div class=arrow> </div>
                  <h3 class=popover-title><%= pat(:delete, :model => "mroute") %></h3>
