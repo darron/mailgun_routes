@@ -1,5 +1,5 @@
-<table><tr><td>Expression</td><td>Action</td></tr>
-<% @mroutes.each do |mroute| %>
-<tr><td><%= mroute['expression'] %></td><td><%= mroute['actions'] %></td></tr>
+<table><tr><td><strong>ID</strong></td><td><strong>Match</strong></td><td><strong>Forward</strong></td></tr>
+<% @mroutes.each do |k,v| %>
+<tr><td><%= k %></td><td><%= v['src'].to_s.gsub!(/\[|\]|\"/, '') %></td><td><%= v['dest'].to_s.gsub!(/\[|\]|\"/, '') %></tr>
 <% end %>
 </table>
